@@ -27,6 +27,7 @@ input{
 
 li {
   margin-top: 10px;
+  list-style-type: none;
 }
 
 button {
@@ -39,5 +40,14 @@ button {
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.incomplete {
+  text-decoration: none;
   
 }
