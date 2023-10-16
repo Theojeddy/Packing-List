@@ -28,6 +28,8 @@ input{
 li {
   margin-top: 10px;
   list-style-type: none;
+  margin-right: 10px;
+  align-items: left;
 }
 
 button {
@@ -50,4 +52,23 @@ button {
 .incomplete {
   text-decoration: none;
   
+}
+/* Style for the checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px; 
+}
+
+.checkbox-input {
+  margin-right: 1px; 
+}
+
+/* Style for the completed items (with line-through) */
+.completed {
+  text-decoration: line-through;
+}
+
+label {
+  margin-left: 1px;
 }

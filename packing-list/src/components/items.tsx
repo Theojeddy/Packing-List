@@ -1,19 +1,15 @@
-// imports
 import React from "react";
-import "../App.css";
+import "../index.css";
 import SubmitButton from "../components/Submitbutton";
 
-// define the item, id, name, completed
 export interface item {
   id: number;
   name: string;
   completed: boolean;
 }
-// create list item function
+
 export default function ListItem() {
- // set states for inputs
   const [input, setInput] = React.useState<string>("");
-  // set state for todos
   const [todos, setTodos] = React.useState<item[]>([
     {
       id: 1,
@@ -26,8 +22,7 @@ export default function ListItem() {
       completed: false,
     },
   ]);
-console.log(todos)
-  // toggle function to switch between completed and incomplete
+
   const handleToggle = (id: number) => {
     setTodos(
       todos.map((todo) => {
@@ -48,12 +43,17 @@ console.log(todos)
         {todos.map((todo) => (
           <li
             key={todo.id}
-            onClick={() => handleToggle(todo.id)}
             className={todo.completed ? "completed" : "incomplete"}
-            // when completed have a line through
-            // when incomplete have no line through
           >
-            {todo.name}
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                className="checkbox-input"
+                checked={todo.completed}
+                onChange={() => handleToggle(todo.id)}
+              />
+              {todo.name}
+            </label>
           </li>
         ))}
       </ul>
