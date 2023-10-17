@@ -26,9 +26,9 @@ input{
 }
 
 li {
-  margin-top: 10px;
-  list-style-type: none;
-  margin-right: 10px;
+  margin-top: 5px;
+  list-style-type:none;
+  margin-right: 100px;
   align-items: left;
 }
 
@@ -57,11 +57,13 @@ button {
 .checkbox-label {
   display: flex;
   align-items: center;
+  margin-left: 1px;
+  margin-right: 1px;
   margin-bottom: 1px; 
 }
 
 .checkbox-input {
-  margin-right: 1px; 
+  margin-right: -50px; 
 }
 
 /* Style for the completed items (with line-through) */
@@ -69,6 +71,3 @@ button {
   text-decoration: line-through;
 }
 
-label {
-  margin-left: 1px;
-}

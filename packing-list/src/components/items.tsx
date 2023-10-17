@@ -45,10 +45,11 @@ export default function ListItem() {
             key={todo.id}
             className={todo.completed ? "completed" : "incomplete"}
           >
-            <label className="checkbox-label">
+            <label className="checkbox-label" >
               <input
                 type="checkbox"
-                className="checkbox-input"
+                className="checkbox-input" 
+                
                 checked={todo.completed}
                 onChange={() => handleToggle(todo.id)}
               />
